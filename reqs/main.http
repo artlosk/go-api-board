@@ -1,0 +1,64 @@
+GET localhost:8080/
+
+###
+
+POST localhost:8080/reg
+Content-Type: application/json
+
+{
+  "login": "User",
+  "password": "Password",
+  "confirm_password": "Password",
+  "nickname": "User1",
+  "avatar": "localhost/p1.png"
+}
+
+###
+
+POST localhost:8080/login
+Content-Type: application/json
+
+{
+  "login": "User1",
+  "password": "Password"
+}
+
+###
+
+
+#
+
+POST localhost:8080/
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZiOTkwYjE0LTY4MWUtNDZjNS1hZGM1LTM0NGRkYjkwNmM4NCJ9.qqeFOsudBQyRFMpklmp_TFc3TW3qVMgoxQBkpQuD95Kto4W9VKHd8sGY_a6f4vpeodZNZwLJ5BksrO8UkbaAYg
+Content-Type: application/json
+
+{
+  "text": "Текст объявления4"
+}
+
+###
+
+GET localhost:8080
+
+###
+
+PUT localhost:8080/
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZiOTkwYjE0LTY4MWUtNDZjNS1hZGM1LTM0NGRkYjkwNmM4NCJ9.qqeFOsudBQyRFMpklmp_TFc3TW3qVMgoxQBkpQuD95Kto4W9VKHd8sGY_a6f4vpeodZNZwLJ5BksrO8UkbaAYg
+Content-Type: application/json
+
+{
+  "id": "c2aed580-0492-47a1-b6a9-0bab5078a913",
+  "text": "Новый текст объявления"
+}
+
+###
+
+DELETE localhost:8080/
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZiOTkwYjE0LTY4MWUtNDZjNS1hZGM1LTM0NGRkYjkwNmM4NCJ9.qqeFOsudBQyRFMpklmp_TFc3TW3qVMgoxQBkpQuD95Kto4W9VKHd8sGY_a6f4vpeodZNZwLJ5BksrO8UkbaAYg
+Content-Type: application/json
+
+{
+  "id": "c2aed580-0492-47a1-b6a9-0bab5078a913"
+}
+
+###
