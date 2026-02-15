@@ -10,10 +10,10 @@ import (
 )
 
 type Registration struct {
-	rep *Repository
+	rep UserRepository
 }
 
-func NewRegistration(rep *Repository) *Registration {
+func NewRegistration(rep UserRepository) *Registration {
 	if rep == nil {
 		panic("nil repository")
 	}
