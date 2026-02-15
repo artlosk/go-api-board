@@ -9,10 +9,10 @@ import (
 )
 
 type Board struct {
-	rep *Repository
+	rep BoardRepository
 }
 
-func NewBoard(rep *Repository) *Board {
+func NewBoard(rep BoardRepository) *Board {
 	if rep == nil {
 		panic("nil repository")
 	}

@@ -9,11 +9,11 @@ import (
 )
 
 type LoginService struct {
-	rep *Repository
+	rep UserRepository
 	jwt *jwt.Jwt
 }
 
-func NewLoginService(rep *Repository, jwt *jwt.Jwt) *LoginService {
+func NewLoginService(rep UserRepository, jwt *jwt.Jwt) *LoginService {
 	return &LoginService{rep: rep, jwt: jwt}
 }
 
